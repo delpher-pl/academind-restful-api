@@ -8,7 +8,9 @@ const mongoose = require('mongoose');
 const productRoutes = require('./api/routes/products');
 const orderRoutes = require('./api/routes/orders');
 
-mongoose.connect('mongodb+srv://admin:' + process.env.MONGO_ATLAS_PW + '@restful-api-r0jo9.mongodb.net/test?retryWrites=true');
+mongoose.connect(
+  'mongodb+srv://admin:' + process.env.MONGO_ATLAS_PW + '@restful-api-r0jo9.mongodb.net/test?retryWrites=true',
+);
 
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({
