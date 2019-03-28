@@ -10,6 +10,7 @@ const orderRoutes = require('./api/routes/orders');
 
 mongoose.connect(
   'mongodb+srv://admin:' + process.env.MONGO_ATLAS_PW + '@restful-api-r0jo9.mongodb.net/test?retryWrites=true',
+  { useNewUrlParser: true },
 );
 
 app.use(morgan('dev'));
